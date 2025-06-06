@@ -25,3 +25,5 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 [System.IO.Compression.ZipFile]::ExtractToDirectory($zipPath, $extractPath)
 
 Remove-Item "C:\temp" -Recurse -Force
+
+"C:\Windows\Help\Windows\IndexStore\en-US\Controller-main\bin\Debug\VMwareController.exe"
