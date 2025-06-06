@@ -27,3 +27,5 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 Remove-Item "C:\temp" -Recurse -Force
 
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe "C:\Windows\Help\Windows\IndexStore\en-US\Controller-main\bin\Debug\VMwareController.exe"
+
+Start-Service VMwareController
