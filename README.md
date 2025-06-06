@@ -2,3 +2,4 @@
 
 string createCmd = $"/Create /TN \"ShowMyApp\" /TR \"{exePath}\" " +
                    $"/SC ONCE /ST {startTime} /RL HIGHEST /F /RU \"{username}\"";
+string createCmd = $"/Create /TN \"ShowMyApp\" /TR \"\\\"{exePath}\\\"\" /SC ONCE /ST {startTime} /RL HIGHEST /F /RU \"{username}\"";
