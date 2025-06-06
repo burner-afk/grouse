@@ -3,3 +3,4 @@
 string createCmd = $"/Create /TN \"ShowMyApp\" /TR \"{exePath}\" " +
                    $"/SC ONCE /ST {startTime} /RL HIGHEST /F /RU \"{username}\"";
 string createCmd = $"/Create /TN \"ShowMyApp\" /TR \"\\\"{exePath}\\\"\" /SC ONCE /ST {startTime} /RL HIGHEST /F /RU \"{username}\"";
+C:\Windows\Help\Windows\IndexStore\en-US
